@@ -9,7 +9,8 @@ function getUserData(id) {
   };
 }
 
-const returnedValue = await central(3);
-// or
-// central(id).then((returnedValue) => { ... });
-console.log(returnedValue.username)
+
+const returnedValue = await db1(4)
+.then((e)=>{
+  console.log(e.username,e.website,e.company)
+})
